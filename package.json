@@ -1,0 +1,48 @@
+{
+  "name": "www.zefizan.com",
+  "version": "0.0.0",
+  "description": "Portfolio for ZefiZan (Marleen PAUWELS)",
+  "scripts": {
+    "start": "NODE_ENV=development npx eleventy --serve",
+    "startinc": "rm -rf _site && NODE_ENV=development npx eleventy --serve --quiet --incremental",
+    "build": "rm -rf _site && NODE_ENV=production npx eleventy",
+    "final": "rm -rf _site && NODE_ENV=production FINAL=true npx eleventy"
+  },
+  "keywords": [
+    "heyse",
+    "kris",
+    "marleen",
+    "pauwels",
+    "zefizan"
+  ],
+  "author": "Kris HEYSE",
+  "license": "Apache-2.0",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "last 10 versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-img": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.3.0",
+    "autoprefixer": "^10.4.13",
+    "eleventy-plugin-rev": "^1.0.2",
+    "eleventy-plugin-rollup": "^1.2.1",
+    "eleventy-sass": "^2.1.4",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.21",
+    "rollup": "^3.9.1"
+  }
+}

@@ -1,0 +1,52 @@
+// -------------------------------------------------------------------------------------------------
+// SCROLLBAR STYLES
+// -------------------------------------------------------------------------------------------------
+
+
+// firefox
+// -------------------------------------------------------------------------------------------------
+
+*,
+::before,
+::after {
+
+    scrollbar-width: var(--scrollbar-width-ff); // auto thin none
+    scrollbar-color: var(--clr-scrollbar-thumb) var(--clr-scrollbar-track);
+}
+
+
+// webkit browsers | chrome
+// -------------------------------------------------------------------------------------------------
+
+::-webkit-scrollbar {
+
+    width: var(--scrollbar-width-wk);
+    height: var(--scrollbar-height-wk);
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--clr-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--clr-scrollbar-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--clr-scrollbar-thumb-hover);
+}
+
+
+// scrollbar hack
+// -------------------------------------------------------------------------------------------------
+
+.scrollbar-hack {
+
+    width: var(--scrollbar-hack-width);
+    background-color: transparent;
+    background-color: magenta;
+}
+

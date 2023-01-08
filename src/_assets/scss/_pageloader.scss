@@ -1,0 +1,85 @@
+.pageloader {
+
+    position: fixed;
+    top: var(--pgl-top);
+    right: 0;
+    bottom: var(--pgl-bottom);
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -1;
+}
+
+.pageloader__animation {
+
+    transform: scale(0.75);
+
+    position: relative;
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &.show {
+
+        display: flex;
+    }
+
+    .pageloader__svg {
+
+        width: 100%;
+
+        path {
+
+            stroke-width: var(--pgl-stroke-width);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+
+            &:nth-of-type(1) {
+    
+                stroke: var(--pgl-animation-color);
+                stroke-dasharray: 150 25 0 25;
+                stroke-dashoffset: 200;
+                animation: preloader-animation var(--pgl-animation-duration) linear infinite reverse;
+            }
+
+            &:nth-of-type(2) {
+    
+                stroke: var(--pgl-animation-color2);
+                stroke-width: calc(var(--pgl-stroke-width) / 2);
+                stroke-dasharray: 120 20 0 20;
+                stroke-dashoffset: 160;
+                animation: pageloader-animation var(--pgl-animation-duration2) linear infinite reverse;
+            }
+        }
+    }
+
+    .pageloader__text {
+
+        margin: 0;
+
+        color: var(--pgl-text-color);
+        font-family: var(--pgl-font-family) !important;
+        font-size: var(--pgl-font-size) !important;
+        text-align: center;
+        letter-spacing: var(--pgl-text-spacing);
+        padding-left: var(--pgl-text-spacing);
+        line-height: var(--pgl-line-height);
+    }
+}
+
+
+// -------------------------------------------------------------------------------------------------
+// ANIMATION
+// -------------------------------------------------------------------------------------------------
+
+@keyframes pageloader-animation {
+
+    to {
+        
+        stroke-dashoffset: 0;
+    }
+}

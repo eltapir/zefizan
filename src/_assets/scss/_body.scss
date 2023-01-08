@@ -1,0 +1,28 @@
+body {
+
+    height: 100%;
+
+    font-family: var(--font-family-custom);
+    font-weight: var(--font-weight-extralight);
+
+    overflow: hidden;
+
+    // override settings from _init.scss
+
+    min-height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+}
+
+.container {
+
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+}
+
+.container--expanded {
+
+    margin: 0;
+    max-width: none;
+}
+

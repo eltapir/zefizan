@@ -1,0 +1,133 @@
+// -------------------------------------------------------------------------------------------------
+// PRELOADER STYLES
+// -------------------------------------------------------------------------------------------------
+
+.preloader {
+
+    // custom properties
+    // ---------------------------------------------------------------------------------------------
+
+    --gradient-primary: #778;
+    --gradient-secondary: #222;
+    --animation-color: #fff;
+    --animation-color2: pink;
+    --animation-duration: 3000ms;
+    --animation-duration2: 6000ms;
+    --fadeout-duration: 500ms;
+    --text-color: skyblue;
+    --text-spacing: 1px;
+    --font-family: monospace;
+    --font-size: 0.7rem;
+    --line-height: 1.5;
+    --stroke-width: 2;
+
+    // ---------------------------------------------------------------------------------------------
+
+    z-index: 100;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader__overlay {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(
+        circle at center,
+        var(--gradient-primary) 0%,
+        var(--gradient-secondary) 100%
+    );
+
+    opacity: 1;
+    transition: opacity var(--fadeout-duration) var(--fadeout-duration);
+
+    &.hidden {
+
+        opacity: 0;
+    }
+}
+
+.preloader__animation {
+
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    transition: opacity var(--fadeout-duration);
+
+    &.hidden {
+
+        opacity: 0;
+    }
+
+    .preloader__svg {
+
+        width: 100%;
+
+        path {
+
+            stroke-width: var(--stroke-width);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+
+            &:nth-of-type(1) {
+    
+                stroke: var(--animation-color);
+                stroke-dasharray: 150 25 0 25;
+                stroke-dashoffset: 200;
+                animation: preloader-animation var(--animation-duration) linear infinite reverse;
+            }
+
+            &:nth-of-type(2) {
+    
+                stroke: var(--animation-color2);
+                stroke-width: calc(var(--stroke-width) / 2);
+                stroke-dasharray: 120 20 0 20;
+                stroke-dashoffset: 160;
+                animation: preloader-animation var(--animation-duration2) linear infinite reverse;
+            }
+        }
+    }
+
+    .preloader__text {
+
+        margin: 0;
+
+        color: var(--text-color);
+        font-family: var(--font-family) !important;
+        font-size: var(--font-size) !important;
+        text-align: center;
+        letter-spacing: var(--text-spacing);
+        padding-left: var(--text-spacing);
+        line-height: var(--line-height);
+    }
+}
+
+
+// -------------------------------------------------------------------------------------------------
+// ANIMATION
+// -------------------------------------------------------------------------------------------------
+
+@keyframes preloader-animation {
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}

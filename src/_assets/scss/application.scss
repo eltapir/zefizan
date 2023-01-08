@@ -1,0 +1,52 @@
+// -------------------------------------------------------------------------------------------------
+// APPLICATION STYLES
+// -------------------------------------------------------------------------------------------------
+
+@import "fonts";
+@import "variables";
+@import "init";
+@import "scrollbar";
+
+@import "body";
+@import "pageloader";
+
+@import "swup";
+
+@import "header";
+@import "main";
+@import "footer";
+
+@import "gallery";
+@import "contact";
+
+// -------------------------------------------------------------------------------------------------
+
+.application {
+
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+}
+
+header {
+
+    grid-area: header;
+}
+
+.main {
+
+    grid-area: main;
+    overflow-y: auto;
+}
+
+.footer {
+
+    grid-area: footer;
+}
+

@@ -1,0 +1,44 @@
+---
+
+layout: page
+
+title: Gallery ZefiZan 2022-2023
+description: Gallery 2022-2023 page for zefizan
+
+eleventyNavigation:
+    key: gallery-2022-2023
+    title: Gallery 2022-2023
+    order: 251
+
+years: [2022, 2023]
+
+---
+
+<section class="container container--expanded">
+
+    <h1 class="container">GALLERY 2022-2023 PAGE</h1>
+
+    <div class="image-grid">
+
+        {% for img in gallery.artworks %}
+        
+            {% if img.year in years %}
+    
+                <div class="image-card">
+    
+                    <div class="image-card__content">
+    
+                        {% imageLink img, globals.baguetteWidths %}
+    
+                    </div>
+    
+                </div>
+    
+            {% endif %}
+        
+        {% endfor %}
+    
+    </div>
+    
+</section>
+

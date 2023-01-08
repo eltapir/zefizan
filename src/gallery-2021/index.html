@@ -1,0 +1,45 @@
+---
+
+layout: page
+
+title: Gallery ZefiZan 2021
+description: Gallery 2021 page for zefizan
+
+eleventyNavigation:
+    key: gallery-2021
+    title: Gallery 2021
+    order: 252
+
+years: [2021]
+
+---
+
+<section class="container container--expanded">
+
+    <h1 class="container">GALLERY 2021 PAGE</h1>
+
+    <div class="image-grid">
+    
+        {% for img in gallery.artworks %}
+        
+            {% if img.year in years %}
+    
+                <div class="image-card">
+    
+                    <div class="image-card__content">
+
+                        <p>{{ img.year }}</p>
+    
+                        {% imageLink img, globals.baguetteWidths %}
+    
+                    </div>
+    
+                </div>
+    
+            {% endif %}
+        
+        {% endfor %}
+    
+    </div>
+    
+</section>

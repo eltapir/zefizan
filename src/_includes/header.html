@@ -1,0 +1,74 @@
+<header class="header">
+
+    <div class="header__content container __container--expanded">
+
+        <!-- TITLE -->
+        <!-- =================================================================================== -->
+
+        <div class="titbar">
+
+            <h2 class="titbar__title">{{ globals.title }}</h2>
+
+        </div>
+
+
+        <!-- NAVBAR -->
+        <!-- =================================================================================== -->
+
+        <nav class="navbar">
+
+            <!-- GET PAGES LINKS -->
+            <!-- =============================================================================== -->
+
+            {% set navPages = collections.all | eleventyNavigation %}
+
+
+            <!-- MENU -->
+            <!-- =============================================================================== -->
+
+            <button class="navbar__toggle" aria-label="toggle offcanvas menu">
+                <span>MENU</span>
+            </button>
+
+            <ul class="navbar__list {% if globals.includeSnipcart %}left{% endif %}">
+
+                {%- for entry in navPages %}
+
+                    <li class="navbar__item">
+
+                        <a
+                            class="navbar__link" 
+                            href="{{ entry.url | url }}"
+                            data-page-key="{{ entry.key }}"
+                            data-page-url="{{ entry.url | url }}"
+                        >
+                            {{ entry.title }}
+                        </a>
+
+                    </li>
+
+                {%- endfor -%}
+                
+            </ul>
+
+        </nav>
+
+        {% if globals.includeSnipcart %}
+
+            <div class="shopcart-container">
+
+                <button class="shopcart snipcart-checkout" name="shop-cart-button">
+                    <svg class="icon icon-shopcart">
+                        <use xlink:href="#icon-shopcart"></use>
+                    </svg>
+                    <div class="text">[<span class="shopcart-items snipcart-items-count">10</span>]</div>
+                </button>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</header>
+

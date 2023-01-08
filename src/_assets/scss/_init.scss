@@ -1,0 +1,101 @@
+/* *****************************************************************************
+
+    CREDITS:
+
+    Josh's Custom CSS Reset
+    https://www.joshwcomeau.com/css/custom-css-reset/
+
+
+    Chris Coyier's "Notes on Josh Comeau’s Custom CSS Reset"
+    https://css-tricks.com/notes-on-josh-comeaus-custom-css-reset/
+
+***************************************************************************** */
+
+
+/* ************************************************************************** */
+/* Josh's Custom CSS Reset                                                    */
+/* ************************************************************************** */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    line-height: calc(1em + 0.5rem); // 1.5;
+
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+
+    height: 100%;
+}
+
+body {
+
+    min-height: 100vh;  // khe: change to % if problems with footers
+                        // not showing on mobiles
+
+    min-height: -webkit-fill-available;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+
+    min-height: -webkit-fill-available;
+}
+
+img, picture, video, canvas, svg {
+
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+
+    isolation: isolate;
+}
+
+
+/* ************************************************************************** */
+/* Chris Coyier's Notes                                                       */
+/* ************************************************************************** */
+
+img {
+
+    vertical-align: bottom;
+}
+
+ul {
+
+    list-style: none;
+}
+
+a {
+
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+
+    list-style: none;
+}
+

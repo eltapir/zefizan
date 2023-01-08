@@ -1,0 +1,154 @@
+// SASS COLOR VARIABLES
+// -------------------------------------------------------------------------------------------------
+
+$clr-fg: hsl(240, 1%, 37%);
+$clr-fg-hover: hsl(261, 98%, 54%);
+$clr-fg-active: lighten($clr-fg-hover, 5%);
+
+$clr-bg: hsl(240, 66%, 91%);
+$clr-bg-hover: rgba(255, 155, 155, 0.4);//$clr-bg;
+$clr-bg-active: rgba(255, 155, 155, 0.2);
+
+$clr-special: rgb(200, 90, 90);
+$clr-special-hover: rgb(220, 110, 110);
+
+$clr-white: white;
+$clr-black: black;
+
+$clr-error: hsl(0, 100%, 60%);
+$clr-valid: hsl(120, 100%, 67%);
+
+
+// CSS CUSTOM PROPERTIES
+// -------------------------------------------------------------------------------------------------
+
+:root {
+
+
+    // FONT
+    // ---------------------------------------------------------------------------------------------
+
+    --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Liberation Sans", "Ubuntu", "Oxygen-Sans", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
+    --font-family-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
+    --font-family-custom: Poppins, var(--font-family-sans);
+
+    --font-scale: 1rem - 16px; // use with responsive text size (see below)
+    --font-size-tiny:   #{unquote('clamp(0.60rem, 0.30rem + 1.05vw + var(--font-scale), 0.70rem)')};
+    --font-size-small:  #{unquote('clamp(0.70rem, 0.30rem + 1.05vw + var(--font-scale), 0.80rem)')};
+    --font-size-normal: #{unquote('clamp(0.90rem, 0.50rem + 1.05vw + var(--font-scale), 1.20rem)')};
+    --font-size-large:  #{unquote('clamp(1.10rem, 0.70rem + 1.05vw + var(--font-scale), 1.60rem)')};
+    --font-size-brand-title:  #{unquote('clamp(1.2rem, 1.5rem + 1.5vw + var(--font-scale), 5rem)')};
+
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: normal; // 400
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: bold;     // 700
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+
+    // CONTAINER / MARGIN / PADDING
+    // ---------------------------------------------------------------------------------------------
+
+    --container-max-width: 768px;
+
+    --margin-normal: 1.0rem;
+    --margin-small: calc(0.5 * var(--margin-normal));
+    --margin-large: calc(2.0 * var(--margin-normal));
+
+    --padding-normal: var(--margin-normal);
+    --padding-small: var(--margin-small);
+    --padding-large: var(--margin-large);
+
+
+    // SCROLLBAR
+    // ---------------------------------------------------------------------------------------------
+
+    --scrollbar-width-ff: auto; // firefox : auto | thin | none
+    --scrollbar-width-wk: 4px;  // webkit
+    --scrollbar-height-wk: 4px; // webkit
+
+    --scrollbar-hack-width: 0px;
+
+    --clr-scrollbar-track: transparent;
+    --clr-scrollbar-thumb: #{$clr-fg};
+    --clr-scrollbar-thumb-hover: #{$clr-fg-hover}; //hsl(348, 85%, 62%);
+
+
+    // PAGE LOADER
+    // ---------------------------------------------------------------------------------------------
+
+    --pgl-top: 0;
+    --pgl-bottom: 0;
+    --pgl-animation-color: #556;
+    --pgl-animation-color2: rgb(99, 30, 14);
+    --pgl-animation-duration: 3000ms;
+    --pgl-animation-duration2: 6000ms;
+    --pgl-text-color: #98f;
+    --pgl-text-spacing: 1px;
+    --pgl-font-family: monospace;
+    --pgl-font-size: 0.7rem;
+    --pgl-line-height: 1.5;
+    --pgl-stroke-width: 2;
+
+
+    // ICONS
+    // ---------------------------------------------------------------------------------------------
+
+    --shopcart-icon-size: 20px;
+    --shopcart-icon-fill: none;
+    --shopcart-icon-stroke: #{$clr-white};
+    --shopcart-icon-stroke-width: 32;
+
+    --socialmedia-icon-size: 1.5rem;
+    --socialmedia-icon-fill: #{$clr-fg};
+    --socialmedia-icon-stroke: none;
+    --socialmedia-icon-stroke-width: 32;
+
+
+    // HEADER
+    // ---------------------------------------------------------------------------------------------
+
+    --header-fg: #{$clr-fg};
+    --header-fg-hover: #{$clr-fg-hover};
+    --header-fg-active: #{$clr-fg-active};
+
+    --header-bg: #{$clr-bg};
+    --header-bg-hover: #{$clr-bg-hover};
+    --header-bg-active: #{$clr-bg-active};
+
+    --offcanvas-bg: #{lighten($clr-bg, 1%)};
+
+    --shopcart-fg: #{$clr-white};
+    --shopcart-bg: #{$clr-special};
+    --shopcart-bg-hover: #{$clr-special-hover};
+
+
+    // MAIN
+    // ---------------------------------------------------------------------------------------------
+
+    --main-fg: #{$clr-fg};
+    --main-fg-hover: #{$clr-fg-hover};
+    --main-fg-active: #{$clr-fg-active};
+
+    --main-bg: #{lighten($clr-bg, 2%)};
+    --main-bg-hover: #{$clr-bg-hover};
+    --main-bg-active: #{$clr-bg-active};
+
+
+    // FOOTER
+    // ---------------------------------------------------------------------------------------------
+
+    --footer-fg: #{$clr-fg};
+    --footer-fg-hover: #{$clr-fg-hover};
+    --footer-fg-active: #{$clr-fg-active};
+
+    --footer-bg: #{$clr-bg};
+    --footer-bg-hover: #{$clr-bg-hover};
+    --footer-bg-active: #{$clr-bg-active};
+
+}
+

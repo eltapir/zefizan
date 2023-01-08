@@ -1,0 +1,130 @@
+// .contact {
+
+    .section__content {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form__container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        max-width: calc(100% - var(--margin-normal));
+        width: 50ch;
+    }
+    
+    .form__image {
+
+        width: 80%;
+        margin-bottom: var(--margin-large);
+    }
+
+    .form {
+    
+        display: flex;
+        flex-direction: column;
+
+        font-size: var(--font-size-small);
+    }
+    
+    .form__control {
+    
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 0 var(--margin-normal) 0;
+
+        label,
+        .control__error {
+
+            color: var(--main-clr);
+            text-transform: capitalize;
+            padding-left: var(--padding-small);
+        }
+
+        .control__error {
+
+            color: var(--error);
+            visibility: hidden;
+        }
+
+        input,
+        textarea,
+        .submit {
+
+            color: var(--main-clr);
+            border-radius: 5px;
+            outline: none;
+            border: none;
+
+        }
+        
+        input,
+        textarea,
+        .submit {
+            
+            background-color: white; //var(--clr-secondary-accent);
+            padding: calc(var(--padding-small) * 0.5) var(--padding-small);
+        }
+
+        &.error {
+
+            .control__error {
+
+                visibility: visible;
+            }
+        }
+    }
+
+    .submit {
+    
+        width: 100%;
+        margin-top: var(--margin-normal);
+        align-self: center;
+
+        font-weight: var(--font-weight-normal);
+        text-transform: capitalize;
+        
+        cursor: pointer;
+
+        color: var(--main-clr);
+        // background-color: var(--main-bgc-light);
+
+        border-radius: 5px;
+        border: none;
+        border: 1px solid var(--main-clr);
+
+        padding: calc(var(--padding-small) * 0.5);
+
+        &:disabled {
+            
+            color: var(--disabled);
+            cursor: default;
+        }
+    }
+
+    .formsubmit-message {
+
+
+        border-radius: 5px;
+        background-color: rgba(255, 0, 0, 0.05);
+
+        margin-top: var(--margin-normal);
+        padding: var(--padding-small);
+
+        justify-self: center;
+        align-self: center;
+
+        display: block;
+        width: 100%;
+
+        font-size: var(--font-size-small);
+        text-align: center;
+    }
+
+
+// }    
