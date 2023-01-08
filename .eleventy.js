@@ -32,8 +32,8 @@ const terser = require('@rollup/plugin-terser');
 const isProduction = process.env.NODE_ENV === 'production';
 const isFinal = process.env.FINAL === 'true';
 const outputFolderName = '_site';
-// const pathPrefix = isFinal ? 'website' : `${outputFolderName}`;
-const pathPrefix = isFinal ? '/' : `${outputFolderName}`;
+const pathPrefix = isFinal ? 'zefizan' : `${outputFolderName}`;
+// const pathPrefix = isFinal ? '/' : `${outputFolderName}`;
 
 
 // -------------------------------------------------------------------------------------------------
